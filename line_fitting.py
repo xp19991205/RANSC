@@ -2,6 +2,7 @@ import numpy as np
 from ransac import *
 
 def augment(xys):
+    #这里的主要目的是样本点扩展为二维，第三维固定为1
     axy = np.ones((len(xys), 3))
     axy[:, :2] = xys
     return axy
